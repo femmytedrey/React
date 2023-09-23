@@ -1,9 +1,12 @@
 import { useState } from "react";
-
+interface Props {
+  items: string[];
+  heading: string;
+}
 
 function ListGroup() {
   let items = ["New York", "San Francisco", "Tokyo", "London"];
-  const [selectedIndex, setSelectedIndex] =   useState(-1);
+  const [selectedIndex, setSelectedIndex] = useState(-1);
 
   return (
     <>
@@ -18,7 +21,9 @@ function ListGroup() {
                 : "list-group-item"
             }
             key={item}
-            onClick={ () => {setSelectedIndex (index)}}
+            onClick={() => {
+              setSelectedIndex(index);
+            }}
           >
             {item}
           </li>
