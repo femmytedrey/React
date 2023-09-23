@@ -1,9 +1,10 @@
-import ListGroup from "./components/ListGroup";
+import Button from "./components/button"
 
 function App() {
   return (
     <div>
-      <ListGroup />
+      <Button color = "info" onClick={() => console.log("Femi_Dev")}>My Button</Button>
+      <Button color = "primary" onClick={() => console.log("Femi_Dev")}>My Button</Button>
     </div>
   );
 }
